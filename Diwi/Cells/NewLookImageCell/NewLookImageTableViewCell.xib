@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="NewLookImageTableViewCell" id="KGk-i7-Jjw" customClass="NewLookImageTableViewCell" customModule="Diwi" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="545"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="545"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="aOe-Ba-hdT">
+                        <rect key="frame" x="48" y="506.5" width="224" height="27.5"/>
+                    </pageControl>
+                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="Ob9-PO-piY">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="498.5"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="92H-mQ-4ek">
+                            <size key="itemSize" width="128" height="128"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                    </collectionView>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZvN-rs-eSm">
+                        <rect key="frame" x="16" y="450.5" width="32" height="32"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <state key="normal" image="camera-no-border"/>
+                        <connections>
+                            <action selector="addPhotoTapped:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="LSC-G2-krb"/>
+                        </connections>
+                    </button>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="965-yZ-UDO">
+                        <rect key="frame" x="272" y="450.5" width="32" height="32"/>
+                        <state key="normal" image="trash"/>
+                        <connections>
+                            <action selector="deleteButtonTapped:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="3gF-cX-idt"/>
+                        </connections>
+                    </button>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="Ob9-PO-piY" secondAttribute="trailing" id="5qe-ff-CUX"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="aOe-Ba-hdT" secondAttribute="trailing" constant="32" id="85W-Jr-enu"/>
+                    <constraint firstItem="ZvN-rs-eSm" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="Gr8-7g-YZM"/>
+                    <constraint firstItem="aOe-Ba-hdT" firstAttribute="bottom" secondItem="H2p-sc-9uM" secondAttribute="bottomMargin" id="JKZ-MS-sB2"/>
+                    <constraint firstItem="aOe-Ba-hdT" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="32" id="dmP-vP-dDf"/>
+                    <constraint firstItem="Ob9-PO-piY" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="k62-VI-fhu"/>
+                    <constraint firstItem="Ob9-PO-piY" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="kx8-Ir-yiJ"/>
+                    <constraint firstItem="aOe-Ba-hdT" firstAttribute="top" secondItem="Ob9-PO-piY" secondAttribute="bottom" constant="8" id="m22-it-wS6"/>
+                    <constraint firstItem="ZvN-rs-eSm" firstAttribute="bottom" secondItem="Ob9-PO-piY" secondAttribute="bottom" constant="-16" id="qvx-Dd-LNr"/>
+                    <constraint firstItem="965-yZ-UDO" firstAttribute="bottom" secondItem="Ob9-PO-piY" secondAttribute="bottom" constant="-16" id="sbe-Qr-Na7"/>
+                    <constraint firstAttribute="trailing" secondItem="965-yZ-UDO" secondAttribute="trailing" constant="16" id="xFH-YS-YZl"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="collectionView" destination="Ob9-PO-piY" id="Bc5-H5-fjD"/>
+                <outlet property="diwiPageControll" destination="aOe-Ba-hdT" id="MWG-kM-cfe"/>
+            </connections>
+            <point key="canvasLocation" x="140.57971014492756" y="227.34375"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="camera-no-border" width="32" height="32"/>
+        <image name="trash" width="32" height="32"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

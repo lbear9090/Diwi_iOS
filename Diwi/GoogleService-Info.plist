@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>460403869772-bhe24dc43cb1niq7vrb425sgd6av220q.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.460403869772-bhe24dc43cb1niq7vrb425sgd6av220q</string>
+	<key>API_KEY</key>
+	<string>AIzaSyBcg-RJMkqsS2kxuwCNVm5BQaaQFz4YJp4</string>
+	<key>GCM_SENDER_ID</key>
+	<string>460403869772</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.diwi.diwi-demo</string>
+	<key>PROJECT_ID</key>
+	<string>diwi-a5a5d</string>
+	<key>STORAGE_BUCKET</key>
+	<string>diwi-a5a5d.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:460403869772:ios:0cb8c67d322bb489824ce9</string>
+	<key>DATABASE_URL</key>
+	<string>https://diwi-a5a5d.firebaseio.com</string>
+</dict>
+</plist>

@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="ProximaNova-Bold.otf">
+            <string>ProximaNova-Bold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="FriendsCollectionViewCell" id="gTV-IL-0wX" customClass="FriendsCollectionViewCell" customModule="Diwi" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="247" height="50"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="247" height="50"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rtt-HQ-w53">
+                        <rect key="frame" x="0.0" y="0.0" width="247" height="50"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Dy-Um-zgZ">
+                                <rect key="frame" x="214" y="11" width="30" height="28"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="30" id="0zA-fz-i5O"/>
+                                    <constraint firstAttribute="height" constant="28" id="a7Q-0d-G7W"/>
+                                </constraints>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" image="removePink"/>
+                                <connections>
+                                    <action selector="removeButtonTap:" destination="gTV-IL-0wX" eventType="touchUpInside" id="sNn-Bi-swZ"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sDz-Bc-83o">
+                                <rect key="frame" x="8" y="17.5" width="206" height="15"/>
+                                <fontDescription key="fontDescription" name="ProximaNova-Bold" family="Proxima Nova" pointSize="15"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="3Dy-Um-zgZ" secondAttribute="trailing" constant="3" id="NAy-mh-7iV"/>
+                            <constraint firstItem="3Dy-Um-zgZ" firstAttribute="leading" secondItem="sDz-Bc-83o" secondAttribute="trailing" id="acB-Ms-DNj"/>
+                            <constraint firstItem="sDz-Bc-83o" firstAttribute="centerY" secondItem="rtt-HQ-w53" secondAttribute="centerY" id="eUX-X9-IvY"/>
+                            <constraint firstItem="3Dy-Um-zgZ" firstAttribute="centerY" secondItem="rtt-HQ-w53" secondAttribute="centerY" id="sdf-Qp-xHN"/>
+                            <constraint firstItem="sDz-Bc-83o" firstAttribute="leading" secondItem="rtt-HQ-w53" secondAttribute="leading" constant="8" id="wOa-1P-y4M"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <constraints>
+                <constraint firstItem="rtt-HQ-w53" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="UcO-lm-9Xc"/>
+                <constraint firstAttribute="bottom" secondItem="rtt-HQ-w53" secondAttribute="bottom" id="aPI-PV-eZT"/>
+                <constraint firstItem="rtt-HQ-w53" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="fZx-j0-ckl"/>
+                <constraint firstAttribute="trailing" secondItem="rtt-HQ-w53" secondAttribute="trailing" id="vQq-Xk-5fE"/>
+            </constraints>
+            <size key="customSize" width="247" height="128"/>
+            <connections>
+                <outlet property="buttonWidthConstraint" destination="0zA-fz-i5O" id="FXC-iL-t87"/>
+                <outlet property="containerView" destination="rtt-HQ-w53" id="kfG-hX-Ldn"/>
+                <outlet property="nameLabel" destination="sDz-Bc-83o" id="NrV-yF-Mk8"/>
+                <outlet property="removeButton" destination="3Dy-Um-zgZ" id="Glh-IE-JE1"/>
+            </connections>
+            <point key="canvasLocation" x="274.63768115942031" y="179.46428571428569"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="removePink" width="28" height="28"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

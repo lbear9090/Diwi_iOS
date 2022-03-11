@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="ProximaNova-Semibold.otf">
+            <string>ProximaNova-Semibold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="FriendsLooksViewController" customModule="Diwi" customModuleProvider="target">
+            <connections>
+                <outlet property="collectionVw" destination="h8W-fG-NgD" id="dRi-UH-lxF"/>
+                <outlet property="contentContainerView" destination="a3o-WA-wP5" id="Q8U-c1-J7p"/>
+                <outlet property="filterButton" destination="oAw-2X-m8u" id="X2j-F1-2mQ"/>
+                <outlet property="filterDescriptionLabel" destination="9N8-yj-gZJ" id="ean-M0-q98"/>
+                <outlet property="tabBarIndicator" destination="QD7-Mv-jxC" id="aLY-ev-ht3"/>
+                <outlet property="tabBarIndicatorWidth" destination="qJr-wS-qbk" id="FVb-6R-W31"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="All looks, newest to oldest" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9N8-yj-gZJ">
+                    <rect key="frame" x="20" y="56" width="168.5" height="17"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <color key="textColor" red="0.44313725490196076" green="0.44313725490196076" blue="0.44313725490196076" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No Looks found for this friend." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oah-AD-Lcc">
+                    <rect key="frame" x="40" y="244" width="334" height="18"/>
+                    <fontDescription key="fontDescription" name="ProximaNova-Semibold" family="Proxima Nova" pointSize="18"/>
+                    <color key="textColor" systemColor="systemGray2Color"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oAw-2X-m8u">
+                    <rect key="frame" x="362" y="48.5" width="32" height="32"/>
+                    <state key="normal" image="filter_descend"/>
+                    <connections>
+                        <action selector="filterButtonTapped:" destination="-1" eventType="touchUpInside" id="Z3N-vt-pSU"/>
+                    </connections>
+                </button>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="a3o-WA-wP5">
+                    <rect key="frame" x="20" y="81" width="374" height="768"/>
+                    <subviews>
+                        <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="h8W-fG-NgD">
+                            <rect key="frame" x="0.0" y="0.0" width="374" height="768"/>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="jgA-gb-E5v">
+                                <size key="itemSize" width="128" height="128"/>
+                                <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                            </collectionViewFlowLayout>
+                            <connections>
+                                <outlet property="dataSource" destination="-1" id="f5a-gx-Vh7"/>
+                                <outlet property="delegate" destination="-1" id="Xjh-Kn-FZ2"/>
+                            </connections>
+                        </collectionView>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstItem="h8W-fG-NgD" firstAttribute="leading" secondItem="a3o-WA-wP5" secondAttribute="leading" id="2eh-Gb-9EZ"/>
+                        <constraint firstAttribute="trailing" secondItem="h8W-fG-NgD" secondAttribute="trailing" id="5n9-UU-Fed"/>
+                        <constraint firstAttribute="bottom" secondItem="h8W-fG-NgD" secondAttribute="bottom" id="Tfc-Pn-TMS"/>
+                        <constraint firstItem="h8W-fG-NgD" firstAttribute="top" secondItem="a3o-WA-wP5" secondAttribute="top" id="rPW-4L-QEY"/>
+                    </constraints>
+                </view>
+                <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QD7-Mv-jxC">
+                    <rect key="frame" x="87" y="857" width="240" height="5"/>
+                    <color key="backgroundColor" systemColor="systemGray2Color"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="240" id="qJr-wS-qbk"/>
+                        <constraint firstAttribute="height" constant="5" id="ucm-1o-zsw"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="QD7-Mv-jxC" firstAttribute="top" secondItem="a3o-WA-wP5" secondAttribute="bottom" constant="8" id="0jm-G8-NTh"/>
+                <constraint firstItem="a3o-WA-wP5" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="MIM-9x-n13"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="a3o-WA-wP5" secondAttribute="trailing" constant="20" id="MNH-NX-00W"/>
+                <constraint firstItem="oah-AD-Lcc" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="200" id="Oru-mF-Bru"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="oah-AD-Lcc" secondAttribute="trailing" constant="40" id="Phh-ur-gPM"/>
+                <constraint firstItem="oah-AD-Lcc" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="40" id="V11-1d-njQ"/>
+                <constraint firstItem="oAw-2X-m8u" firstAttribute="centerY" secondItem="9N8-yj-gZJ" secondAttribute="centerY" id="a6X-tF-DWs"/>
+                <constraint firstItem="9N8-yj-gZJ" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="12" id="dcM-F0-CA5"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="oAw-2X-m8u" secondAttribute="trailing" constant="20" id="f3v-E9-UEK"/>
+                <constraint firstItem="QD7-Mv-jxC" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="nng-0x-3oA"/>
+                <constraint firstItem="9N8-yj-gZJ" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="vYQ-eT-r4B"/>
+                <constraint firstItem="a3o-WA-wP5" firstAttribute="top" secondItem="9N8-yj-gZJ" secondAttribute="bottom" constant="8" id="w2s-3c-oI3"/>
+                <constraint firstItem="QD7-Mv-jxC" firstAttribute="bottom" secondItem="fnl-2z-Ty3" secondAttribute="bottom" id="xq4-Jk-TdG"/>
+            </constraints>
+            <point key="canvasLocation" x="140.57971014492756" y="140.625"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="filter_descend" width="32" height="32"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGray2Color">
+            <color red="0.68235294117647061" green="0.68235294117647061" blue="0.69803921568627447" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
